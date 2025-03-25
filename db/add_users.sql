@@ -1,3 +1,5 @@
+use gatekeeping_db;
+
 --dummy data 
 -- Gatekeeper: fares@admin.com, password=password123
 INSERT INTO users (role, name, email, password_hash) 
@@ -13,8 +15,8 @@ VALUES ('resident', 'Resident User', 'fares@resident.com', '$2b$12$o21h5IGExviS4
 
 -- Link resident to residents table
 INSERT INTO residents (user_id, face_data_ref) 
-VALUES (3, NULL);  -- user_id=3 corresponds to resident@example.com
+VALUES (2, NULL);  -- user_id=3 corresponds to resident@example.com
 
 -- Add a car for the resident
 INSERT INTO cars (resident_id, license_plate) 
-VALUES (1, 'ABC123');  -- resident_id=1 corresponds to the resident entry
+VALUES (2, 'ABC123');  -- resident_id=1 corresponds to the resident entry
