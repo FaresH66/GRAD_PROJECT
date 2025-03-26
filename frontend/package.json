@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.3.0",
   "type": "module",
+  "proxy": "http://localhost:5000",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -11,17 +12,22 @@
     "deploy": "gh-pages -d dist && cp dist/index.html dist/404.html"
   },
   "dependencies": {
+    "@radix-ui/react-select": "^2.1.6",
     "@radix-ui/react-slot": "^1.1.0",
+    "axios": "^1.8.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.5.0",
     "lucide-react": "^0.455.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.0.1",
+    "socket.io-client": "^4.8.1",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",
+    "@types/axios": "^0.14.4",
     "@types/node": "^20.8.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",

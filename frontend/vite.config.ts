@@ -5,7 +5,7 @@ import { resolve } from "path";
 
 export default defineConfig({
 
-  base: "/react-vite-shadcn-ui-template/",
+  base: "/",
   plugins: [react()],
   resolve: {
     alias: {
@@ -15,5 +15,14 @@ export default defineConfig({
   build: {
     outDir: "dist",
     sourcemap: true,
+  },
+  server: {
+    proxy: {
+      '/login': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/login/, '/login'),
+      },
+    },
   },
 });
