@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/sh
 
 sudo apt update -y && sudo apt-get upgrade -y
 sudo apt install mysql-server
