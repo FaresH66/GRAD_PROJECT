@@ -148,7 +148,7 @@ if __name__ == "__main__":
     os.makedirs(debug_dir, mode=0o755, exist_ok=True)    
     yolo_model = '/workspaces/GRAD_PROJECT/backend/yolo11m_car_plate_trained.pt'
     final_test = crop_Plate(yolo_model,
-                            "/workspaces/GRAD_PROJECT/backend/test.jpg")
+                            "/workspaces/GRAD_PROJECT/backend/007.jpg")
     text = detect_text_with_paddleocr(np.array(final_test),debug_dir)
     # text = text[1]
     tmp = []
